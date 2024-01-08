@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JoinPage</title>
+</head>
+<body>
+<header>
+    <h1>회원가입</h1>
+    <h2>원활한 서비스를 이용을 위해 회원가입을 해주세요</h2>
+</header>
+<main>
+    <form action="">
+        <label for="user-id">
+            아이디 <input id="user-id" type="text" required>
+        </label>
+        <br>
+        <label for="user-email">
+            이메일 <input id="user-email" type="text" required>
+        </label>
+        <br>
+        <label for="user-pw">
+            비밀번호 <input id="user-pw" type="text" required>
+        </label>
+        <br>
+        <label for="user-nickname">
+            닉네임 <input id="user-nickname" type="text" required>
+        </label>
+    </form>
+
+    <fieldset>
+        <legend>성별</legend>
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="gender" value="male" required> 남성
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="gender" value="female"> 여성
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="gender" value="none"> 선택 안함
+                </label>
+            </li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>사용 기술</legend>
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox" name="HTML">
+                    HTML
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="CSS">
+                    CSS
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="JavaScript">
+                    JavaScript
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="Python">
+                    Python
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="Django">
+                    Django
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="GitHub">
+                    GitHub
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="PostgreSQL">
+                    PostgreSQL
+                </label>
+            </li>
+        </ul>
+    </fieldset>
+
+    <button>회원가입</button>
+</main>
+
+</body>
+</html>
