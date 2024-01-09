@@ -12,52 +12,54 @@
             left: 25px;
             border: 1px solid #DBDBDB;
             border-radius: 5px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-evenly;
+            align-items: center;
+
         }
 
         .welcome {
-            position: relative;
-            width: 250px;
+            width: 318px;
             height: 15px;
-            top: 10px;
-            left: 16px;
-            font-size: 12px;
+            font-size: 13px;
         }
 
         button {
-            position: absolute;
             width: 318px;
             height: 40px;
-            top: 50px;
-            left: 16px;
             border-radius: 4px;
             background-color: #711BFF;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .login {
-            position: absolute;
             width: 120px;
             height: 18px;
-            top: 44px;
-            left: 116px;
-
-            color:white;
+            color: white;
         }
-        .find{
-            position:absolute;
+
+        .link {
+            width: 318px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .find {
             width: 140px;
             height: 16px;
-            top: 106px;
-            left: 16px;
-
             font-size: 12px;
         }
-        .join{
-            position:absolute;
+
+        .join {
             width: 80px;
             height: 16px;
-            top: 106px;
-            left: 260px;
-
             font-size: 12px;
         }
     </style>
@@ -65,13 +67,13 @@
 <body>
 <main>
     <p class="welcome">더 편리해진 위니브에 오신 것을 환영합니다.</p>
-    <button></button>
-
-    <p class="login"><img src="img/weniv-logo.png">로그인</p>
-
-    <a href="" class="find"> <img src="img/icon-lock.png"> 아이디 | 비밀번호찾기</a>
-    <a href="" class="join"> <img src="img/icon-user.png"> 회원가입</a>
-
+    <button>
+        <p class="login"><img src="img/weniv-logo.png">로그인</p>
+    </button>
+    <div class="link">
+        <a href="" class="find"> <img src="img/icon-lock.png"> 아이디 | 비밀번호찾기</a>
+        <a href="" class="join"> <img src="img/icon-user.png"> 회원가입</a>
+    </div>
 
 </main>
 </body>
