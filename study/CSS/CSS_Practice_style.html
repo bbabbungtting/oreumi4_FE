@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*h1,*/
+        /*h2,*/
+        /*p {color:red;}*/
+
+        /*div{*/
+        /*    color: inherit;*/
+        /*    border: 5px solid red;*/
+        /*}*/
+
+        /*h2{*/
+        /*    height:1000px;*/
+        /*}*/
+        /*#second-h2{*/
+        /*    color:blue;*/
+        /*}*/
+        /*.color-red {*/
+        /*    color: red;*/
+        /*}*/
+        /*#second-h2 p [class="color-red"]{*/
+
+        /*}*/
+        section + p{
+            color: red;
+        }
+        .text{
+            color:blue;
+        }
+
+        a:link{
+            color: teal;
+        }
+        a:hover{
+            color: yellow;
+        }
+        p:active{
+            background-color: teal;
+        }
+        a:focus{
+            background-color: royalblue;
+        }
+
+        p.text{
+
+        }
+
+        div:first-child{
+            border: 3px solid pink;
+        }
+        table td:first-child{
+
+        }
+        div{
+            background-color: blue;
+        }
+
+        div.blue{
+            background-color: blue;
+        }
+
+        div.blue.border-blue{
+            background-color: blue;
+            border:1px solid blue;
+        }
+
+        table tr td:last-child{
+            border:1px solid pink;
+        }
+
+        table td:nth-child(1){
+            color : red;
+        }
+
+        div:last-child{
+            border:1px solid pink;
+        }
+
+        ul li:nth-child(2n-3){
+            background-color: hotpink;
+        }
+
+        li:not(:first-child){
+            margin-top:20px;
+        }
+
+        article::before{
+            display: block;
+            content:'';
+            background-color: blue;
+        }
+
+        article::after{
+            content:'last child!';
+        }
+
+    </style>
+<!--    <link rel="stylesheet" href="reset.css">-->
+
+</head>
+<body>
+
+    <article>
+        hello element!
+    </article>
+
+    <ul>
+        <li>1</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+
+<table>
+    <tr><td>hello1</td><td>hello</td><td>hello</td></tr>
+    <tr><td>hello1</td><td>hello</td><td>hello</td></tr>
+    <tr><td>hello1</td><td>hello</td><td>hello</td></tr>
+</table>
+
+    <div>div!!</div>
+    <a href="https://www.test.net">다음으로 이동하기</a>
+    <a href="https://www.naver.com">네이버로 이동하기</a>
+
+    <p class="text" id="id-text">
+        hello
+        <span>world</span>
+    </p>
+    <p>hello</p>
+    <p>hello</p>
+    <section>
+        나는 섹션!
+    </section>
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+
+    <div>
+        <p>hello world!!</p>
+        <input type="text">
+        <input type="password">
+        <input type="button">
+        <a href="#">h2로 이동하기</a>
+        <h1 class="color-red">Hello</h1>
+        <h2 class="color-red" id="first-h2">Hello</h2>
+        <h2 class="color-red" id="second-h2">Hello</h2>
+        <p>Hello</p>
+    </div>
+</body>
+</html>

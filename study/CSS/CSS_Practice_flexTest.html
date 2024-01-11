@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex</title>
+    <style>
+        .blue{
+            background-color: blue;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .green{
+            background-color: green;
+        }
+        .wrap{
+            display : flex;
+            justify-content: space-between;
+            width: 500px;
+            height: 500px;
+        }
+        div div{
+            width: 50px;
+            height: 50px;
+        }
+        .left_side, .center{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .right_side{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+<article class="wrap">
+    <div class="left_side">
+        <div class="blue">a</div>
+        <div class="green">b</div>
+        <div class="yellow">c</div>
+    </div>
+    <div class="center">
+        <div class="blue">d</div>
+        <div class="yellow">e</div>
+    </div>
+    <div class="right_side">
+        <div class="blue">f</div>
+        <div class="green">g</div>
+        <div class="yellow">h</div>
+    </div>
+</article>
+
+</body>
+</html>
