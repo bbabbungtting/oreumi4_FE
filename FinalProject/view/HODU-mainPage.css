@@ -7,9 +7,61 @@ nav{
     justify-content: space-around;
 }
 
-ul{
+button{
+    border-radius: 40px;
+
+    background-color: #D97652;
+    border-color: #D97652;
+
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.button-download{
+    width: 140px;
+    height: 50px;
+}
+
+.ul-header{
     display: flex;
     justify-content: space-around;
 
     list-style: none;
+    align-items: center;
+    gap: 30px;
+}
+
+.ul-header li a{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.div-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ul-footer{
+    display: flex;
+    justify-content: space-around;
+
+    gap: 10px;
+    align-items: center;
+
+    list-style: none;
+}
+
+.catImage-footer{
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+footer button{
+    border-color: #FFFFFF;
+    border-radius: 50%;
 }
