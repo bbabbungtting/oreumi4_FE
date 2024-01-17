@@ -4,54 +4,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+    <!--    <link rel="shortcut icon" href="../assets/images/favicon.ico">-->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="HODU-mainPage.css">
     <title>HODU</title>
 </head>
 <body>
-<header class="header">
-    <nav>
-        <img src="../assets/images/Logo-fin.svg" alt="fin logo">
-        <ul class="ul-header">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Support</a></li>
-            <button class="button-download">Download</button>
-        </ul>
-    </nav>
-    <div class = div-header>
-        <article>
-            <h1>Lorem Ipsum is simply<br>
-                dummy text of the printing and
-            </h1>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and<br>
-                typesetting industry.<br>
-                Lorem Ipsum has been the industry's standard dummy text<br>
-                ever since the 1500s, when an unknown
-            </p>
-            <button class="button-download">Download</button>
-        </article>
-        <img src="../assets/images/img_cat_header.png" alt="cat image">
+<header id="header">
+    <div class="wrapper">
+        <nav>
+            <img src="../assets/images/Logo-fin.svg" alt="fin logo">
+            <ul class="ul-header">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Support</a></li>
+                <button class="button-download">Download</button>
+            </ul>
+        </nav>
+        <div class="intro">
+            <article class="intro_saying">
+                <h1>
+                    Lorem Ipsum is simply<br>
+                    dummy text of the printing and
+                </h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and<br>
+                    typesetting industry.<br>
+                    Lorem Ipsum has been the industry's standard dummy text<br>
+                    ever since the 1500s, when an unknown
+                </p>
+                <button class="button-download">Download</button>
+            </article>
+            <img src="../assets/images/img_cat_header.png" alt="cat image">
+        </div>
     </div>
 </header>
 
 <main>
+    <div class="wrapper">
+        <section class="">
+            <div class="img_wrap">
+                <img src="" alt="HODU">
+            </div>
+            <article>
+                <h3>
+                    Lorem Ipsum is simply<br>
+                    dummy text of the printing<br>
+                    and dummy text
+                </h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            </article>
+        </section>
 
+        <section class="main-photos">
+            <h2>dummy text of the printing and dummy</h2>
+            <p>
+                Lorem Ipsum is simply <strong>dummy text</strong> of the printing and typesetting industry. <br>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            </p>
+
+            <ul class="list-photos">
+
+            </ul>
+            <h3>
+                Continue exploring HODU
+            </h3>
+            <button>
+                Show more
+            </button>
+        </section>
+
+        <section class="map">
+            <h2>
+                Where you'll be
+            </h2>
+            <p>
+                330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
+            </p>
+
+        </section>
+
+        <section class="subscribe">
+            <div class="">
+                <h3>
+                    Subscribe to our Blog post
+                </h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                    Lorem Ipsum has been the industry's standard dummy text
+                </p>
+            </div>
+            <form class="form-subscribe">
+                <input id="inputEmail" type="email" placeholder="Enter your e-mail address">
+                <button type="submit" class="">Subscribe</button>
+            </form>
+
+        </section>
+    </div>
 </main>
 
-<footer>
+<section id="modal">
+    <div class="modal_wrap">
+        <div class="HODU_img">
+            <img src="" alt="HODU">
+        </div>
+        <div class="thank">
+            <h1>Thank you!!</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+        </div>
+        <div class="btn">
+            <button class="">OK! I Love HODU</button>
+        </div>
+    </div>
+</section>
+
+<footer id="footer">
     <img class="catImage-footer" src="../assets/images/img_cat_footer.png" alt="cat image">
-    <nav>
-        <img src="../assets/images/Logo-fin.svg" alt="fin logo">
-        <ul class="ul-footer">
-            <li><button><img src="../assets/images/blog.png" alt="blog logo"></button></li>
-            <li><button><img src="../assets/images/instagram.png" alt="instagram logo"></button></li>
-            <li><button><img src="../assets/images/facebook.png" alt="facebook logo"></button></li>
-            <li><button><img src="../assets/images/youtube.png" alt="youtube logo"></button></li>
-        </ul>
-    </nav>
+    <div class="wrapper">
+        <nav>
+            <img src="../assets/images/Logo-fin.svg" alt="fin logo">
+            <ul class="ul-footer">
+                <li>
+                    <button><img src="../assets/images/blog.png" alt="blog logo"></button>
+                </li>
+                <li>
+                    <button><img src="../assets/images/instagram.png" alt="instagram logo"></button>
+                </li>
+                <li>
+                    <button><img src="../assets/images/facebook.png" alt="facebook logo"></button>
+                </li>
+                <li>
+                    <button><img src="../assets/images/youtube.png" alt="youtube logo"></button>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </footer>
 </body>
 </html>
