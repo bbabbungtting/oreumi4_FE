@@ -1,5 +1,17 @@
+@charset "utf-8";
+@import "../assets/fonts/fonts.css";
+
+body{
+    font-family: 'Pretendard-Regular';
+}
+
 header{
     background-color: #F2E9D8;
+}
+
+h1{
+    font-size: 48px;
+    font-weight: 700;
 }
 
 nav{
