@@ -185,6 +185,11 @@ main .img_wrap img{
     line-height: 20px;
 }
 
+#kakaomap{
+    width: 100%;
+    height: 350px;
+}
+
 /* subscribe 부분 */
 .subscribe{
     position: relative;
