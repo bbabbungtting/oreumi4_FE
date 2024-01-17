@@ -1,22 +1,20 @@
 @charset "utf-8";
 @import "../assets/fonts/fonts.css";
 
-body{
+/* 공통 부분 */
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body *{
     font-family: 'Pretendard-Regular';
 }
 
-header{
-    background-color: #F2E9D8;
-}
-
-h1{
-    font-size: 48px;
-    font-weight: 700;
-}
-
-nav{
-    display: flex;
-    justify-content: space-around;
+.wrapper{
+    width: 75%;
+    height: 100%;
+    flex-direction: column;
 }
 
 button{
@@ -30,9 +28,23 @@ button{
     color: #FFFFFF;
 }
 
-.button-download{
-    width: 140px;
-    height: 50px;
+/* header 부분 */
+header{
+    background-color: #F2E9D8;
+
+    display: flex;
+    justify-content: center;
+}
+
+header .wrapper{
+    margin-top: 30px;
+}
+
+/* header - nav 부분 */
+
+.nav-header{
+    display: flex;
+    justify-content: space-between;
 }
 
 .ul-header{
@@ -47,14 +59,61 @@ button{
 .ul-header li a{
     color: #000000;
     font-size: 16px;
-    font-weight: 400;
+    line-height: 20px;
     text-decoration: none;
 }
 
-.div-header{
+.button-download{
+    width: 140px;
+    height: 50px;
+}
+
+/* header - intro 부분 */
+.intro {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.intro_saying{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro_saying h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.intro_saying p{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 40px;
+}
+
+/* main 부분 */
+
+.img-bottom{
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+/* footer 부분 */
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+footer .wrapper{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.nav-footer{
+    display: flex;
+    justify-content: space-between;
 }
 
 .ul-footer{
@@ -63,17 +122,5 @@ button{
 
     gap: 10px;
     align-items: center;
-
     list-style: none;
-}
-
-.catImage-footer{
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-}
-
-footer button{
-    border-color: #FFFFFF;
-    border-radius: 50%;
 }
