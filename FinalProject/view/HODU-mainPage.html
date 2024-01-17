@@ -71,7 +71,9 @@
             </h3>
             <button class="button-show">Show more</button>
         </section>
+
         <hr>
+
         <section class="map">
             <h2>
                 Where you'll be
@@ -79,11 +81,11 @@
             <p>
                 330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
             </p>
-
+            <div id="map"></div>
         </section>
 
-        <section class="subscribe">
-            <div class="">
+        <div class="subscribe">
+            <article>
                 <h3>
                     Subscribe to our Blog post
                 </h3>
@@ -91,27 +93,28 @@
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
                     Lorem Ipsum has been the industry's standard dummy text
                 </p>
-            </div>
-            <form class="form-subscribe">
-                <input id="inputEmail" type="email" placeholder="Enter your e-mail address">
+            </article>
+            <label>
+                <div class="input-wrap">
+                    <img src="../assets/images/mail.svg">
+                    <input class="input-Email" type="email" placeholder="Enter your e-mail address">
+                </div>
                 <button type="submit" class="button-subscribe">Subscribe</button>
-            </form>
-        </section>
+            </label>
+        </div>
     </div>
 </main>
 
 <section id="modal">
     <div class="modal_wrap">
         <div class="HODU_img">
-            <img src="" alt="HODU">
+            <img src="../assets/images/img_cat_modal.png" alt="HODU">
         </div>
-        <div class="thank">
-            <h1>Thank you!!</h1>
+        <article class="thank">
+            <h3>Thank you!!</h3>
             <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-        </div>
-        <div class="btn">
-            <button class="">OK! I Love HODU</button>
-        </div>
+            <button class="button-love">OK! I Love HODU</button>
+        </article>
     </div>
 </section>
 
