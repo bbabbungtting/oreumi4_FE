@@ -5,6 +5,9 @@
     <title>Title</title>
 
     <style>
+        header{
+            height: 500px;
+        }
         .image-List img {
             width: 300px;
         }
@@ -15,15 +18,23 @@
 
             list-style: none;
         }
+        footer{
+            background-color: #711BFF;
+            height: 1500px;
+        }
 
     </style>
 </head>
 <body>
-<h1>picsum images~</h1>
-<main>
+<header>
+    <h1>picsum images~</h1>
+</header>
+<main id="main">
     <ul class="image-List"></ul>
 </main>
-
+<footer>
+    Oremi
+</footer>
 
 <script>
     const imageList = document.querySelector(".image-List");
@@ -55,6 +66,7 @@
     }
 
     //scroll 감도 줄이기 -> 쓰로틀링 사용해보기
+    const main = document.getElementById('main');
 
     window.addEventListener('scroll', () => {
         //스크롤이 상단으로부터 얼마나 이동 했는지 (뷰포트의 높이 + 추가로 스크롤된 길이)
@@ -64,9 +76,9 @@
           === 화면에 로딩된 페이지의 전체 높이 : 끝까지 내려갔을 떄
         */
         // 뷰포트의 높이          문서 자체 물어볼때       위에서 스크롤된 길이
-
+        console.log(window.innerHeight , document.documentElement.scrollTop, main.offsetTop + main.offsetHeight)
         if (window.innerHeight + document.documentElement.scrollTop + 15 >=
-            document.documentElement.offsetHeight) {
+            main.offsetTop + main.offsetHeight) {
             if (!timer) {
                 timer = setTimeout(() => {
                     timer = null;
