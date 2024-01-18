@@ -166,12 +166,18 @@ main .img_wrap img{
 
 .list-photos{
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    list-style: none;
+    height: auto;
 
-    gap: 5%;
-    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 10vh;
+}
+
+.list-photos li{
+    width: 30%;
+    margin: 2vh 0;
 }
 
 .list-photos li img{
