@@ -206,13 +206,13 @@ main .img_wrap img {
 .subscribe {
     position: relative;
     top: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
     height: 200px;
     border-radius: 30px;
     background-color: #263140;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .subscribe article {
@@ -232,29 +232,27 @@ main .img_wrap img {
     line-height: 18px;
 }
 
-.subscribe label {
+.subscribe fieldset {
     width: 40%;
-
     background-color: #FFFFFF;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    border-radius: 30px;
     padding: 5px 10px 5px 10px;
 }
 
-.input-wrap {
+.email-label {
     display: flex;
     align-items: center;
 }
 
-.input-wrap img {
+.email-label img {
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.input-Email {
+#user-email {
     border: none;
 }
 

@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--    <link rel="shortcut icon" href="../assets/images/favicon.ico">-->
+
+    <!--    <link rel="icon" href="../assets/images/HODU.ico">-->
+    <link rel="icon" href="../assets/images/img_cat_modal.png">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="HODU-mainPage.css">
     <link rel="stylesheet" href="button.css">
-    <title>HODU</title>
+    <title>♡WE LOVE HODU♡</title>
 </head>
 <body>
 <header>
     <div class="wrapper">
         <nav class="nav-header">
-            <button class="button-logo-header">
+            <button type="button" class="button-logo-header">
                 <img src="../assets/images/Logo-fin.svg" alt="fin logo">
             </button>
             <ul class="ul-header">
@@ -91,7 +93,7 @@
             <div id="kakaomap"></div>
         </section>
 
-        <div class="subscribe">
+        <form class="subscribe" method="post" enctype="multipart/form-data">
             <article>
                 <h3>
                     Subscribe to our Blog post
@@ -101,14 +103,14 @@
                     Lorem Ipsum has been the industry's standard dummy text
                 </p>
             </article>
-            <label>
-                <div class="input-wrap">
+            <fieldset>
+                <label class="email-label" for="user-email">
                     <img src="../assets/images/mail.svg">
-                    <input class="input-Email" type="email" placeholder="Enter your e-mail address">
-                </div>
+                    <input type="email" id="user-email" placeholder="Enter your e-mail address" required>
+                </label>
                 <button type="submit" class="button-subscribe">Subscribe</button>
-            </label>
-        </div>
+            </fieldset>
+        </form>
     </div>
 </main>
 
@@ -132,7 +134,7 @@
 <footer>
     <div class="wrapper">
         <nav class="nav-footer">
-            <button class="button-logo-footer">
+            <button type="button" class="button-logo-footer">
                 <img src="../assets/images/Logo-fin.svg" alt="fin logo">
             </button>
             <ul class="ul-footer">
