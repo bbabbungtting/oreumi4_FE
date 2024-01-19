@@ -5,6 +5,9 @@ const btn_love = document.querySelector('.button-love');
 const btn_up = document.getElementById("botton-up");
 let img_up = document.getElementById("img-up");
 const modal = document.getElementById("modal");
+
+let btn_bigImg = document.getElementById("big-img");
+let cols = document.querySelectorAll('.btn-list');
 let pageNum = 1;
 
 btn_show.addEventListener('click', function () {
@@ -26,7 +29,21 @@ form_sub.addEventListener('submit',function(event){
 
 btn_love.addEventListener('click',function (){
     modal.style.display = 'none';
+});
+
+btn_bigImg.addEventListener('click',function (){
+    btn_bigImg.style.display = 'none';
+});
+
+[].forEach.call(cols, function (col){
+    col.addEventListener('click',show,false);
 })
+
+function show(){
+    btn_bigImg.style.display = 'block';
+    let img_source = this.querySelector('img').src;
+    btn_bigImg.innerHTML = '<img src="' + img_source + '">';
+}
 
 var backToTop = () =>{
     window.addEventListener('scroll',()=>{
