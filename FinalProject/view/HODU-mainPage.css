@@ -336,6 +336,7 @@ main .img_wrap img{
 
     background-color: #FFF;
     border: 5px solid #D3D3D3;
+    cursor: default;
 }
 
 /* 이미지 부분 */
