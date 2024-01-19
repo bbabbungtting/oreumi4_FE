@@ -22,7 +22,7 @@ async function fetchImages(pNum) {
 
 function makeImageList(datas) {
     datas.forEach((item) => {
-        imageList.innerHTML += "<li><img src=" + item.download_url + " alt=''></li>";
+        imageList.innerHTML += "<li><button class='btn-list'><img src=" + item.download_url + " alt=''></button></li>";
     })
 }
 
