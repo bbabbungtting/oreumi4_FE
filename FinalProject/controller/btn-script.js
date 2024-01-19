@@ -1,9 +1,10 @@
 const btn_show = document.querySelector('.button-show');
-const btn_sub = document.querySelector(".button-subscribe");
+const form_sub = document.getElementById("sub-form");
+let email_input = document.getElementById("user-email");
 const btn_love = document.querySelector('.button-love');
-const btn_up = document.getElementById('botton-up');
-let img_up = document.getElementById('img-up');
-const modal = document.getElementById('modal');
+const btn_up = document.getElementById("botton-up");
+let img_up = document.getElementById("img-up");
+const modal = document.getElementById("modal");
 let pageNum = 1;
 
 btn_show.addEventListener('click', function () {
@@ -17,14 +18,15 @@ btn_show.addEventListener('click', function () {
     }
 });
 
-btn_sub.addEventListener('click',function(){
+form_sub.addEventListener('submit',function(event){
+    event.preventDefault();
     modal.style.display = 'block';
-})
+    email_input.value = '';
+});
 
 btn_love.addEventListener('click',function (){
     modal.style.display = 'none';
 })
-
 
 var backToTop = () =>{
     window.addEventListener('scroll',()=>{
