@@ -2,7 +2,7 @@ button {
     border-radius: 40px;
 
     background-color: #D97652;
-    border-color: #D97652;
+    border-width: 0px;
 
     font-weight: 700;
     font-size: 16px;
@@ -16,6 +16,16 @@ button {
     height: 50px;
 }
 
+.button-logo-header{
+    border-radius: 0px;
+    background-color: #F2E9D8;
+}
+
+.button-logo-footer{
+    border-radius: 0px;
+    background-color: #FFF;
+}
+
 /* 위로가기 버튼 부분 */
 #botton-up {
     position: fixed;
@@ -23,7 +33,7 @@ button {
     left: 95%;
     width: 40px;
     height: 40px;
-    z-index: 1000;
+    z-index: 999;
 
     display: flex;
     justify-content: center;
