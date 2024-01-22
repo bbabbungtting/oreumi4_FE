@@ -1,13 +1,17 @@
-const btn_show = document.querySelector('.button-show');
 const form_sub = document.getElementById("sub-form");
 let email_input = document.getElementById("user-email");
-const btn_love = document.querySelector('.button-love');
-const btn_up = document.getElementById("botton-up");
+const btn_love = document.querySelector('.btn-love');
+const btn_up = document.getElementById("btn-up");
 let img_up = document.getElementById("img-up");
 const modal = document.getElementById("modal");
 
-let btn_bigImg = document.getElementById("big-img");
-let cols = document.querySelectorAll('.btn-list');
+let btn_bigImg = document.getElementById("btn-img-expan");
+let cols = document.querySelectorAll('.btn-img');
+
+//////////////////////////////
+const btn_show = document.querySelector('.btn-show');
+let isShow = false;
+
 
 btn_show.addEventListener('click', function () {
     if (isShow) {

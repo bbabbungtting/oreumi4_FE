@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "../assets/fonts/fonts.css";
+@import "../../assets/fonts/fonts.css";
 
 /* 공통 부분 */
 html, body {
@@ -30,8 +30,7 @@ header .wrapper {
     margin-top: 30px;
 }
 
-/* header - nav 부분 */
-
+/* header : nav 부분 */
 .nav-header {
     display: flex;
     justify-content: space-between;
@@ -53,25 +52,25 @@ header .wrapper {
     text-decoration: none;
 }
 
-/* header - intro 부분 */
-.intro {
+/* header : intro 부분 */
+.intro-header {
     display: flex;
     justify-content: space-between;
 }
 
-.intro_saying {
+.intro-header-saying {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.intro_saying h1 {
+.intro-header-saying h1 {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 40px;
 }
 
-.intro_saying p {
+.intro-header-saying p {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 40px;
@@ -83,7 +82,7 @@ main {
     justify-content: center;
 }
 
-/* intro 부분 */
+/* main : intro 부분 */
 .intro-main {
     display: flex;
     align-items: center;
@@ -92,13 +91,8 @@ main {
     margin-bottom: 120px;
 }
 
-main .img_wrap {
+.intro-main img{
     width: 50%;
-}
-
-main .img_wrap img {
-    width: 100%;
-
     box-shadow: 10px 10px 30px 0px #00000040;
     border-radius: 30px;
 }
@@ -115,7 +109,7 @@ main .img_wrap img {
     line-height: 20px;
 }
 
-/* main photos 부분 */
+/* main : 사진 부분 */
 .main-photos {
     display: flex;
     flex-direction: column;
@@ -162,7 +156,7 @@ main .img_wrap img {
     margin: 2vh 0;
 }
 
-.list-photos li img {
+.list-photos img {
     width: 100%;
     border-radius: 30px;
     box-shadow: 10px 10px 30px 0px #00000040;
@@ -174,60 +168,6 @@ main .img_wrap img {
     line-height: 30px;
 
     margin-bottom: 30px;
-}
-
-/* subscribe 부분 */
-.subscribe {
-    position: relative;
-    top: 100px;
-    height: 200px;
-    border-radius: 30px;
-    background-color: #263140;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.subscribe article {
-    color: #FFFFFF;
-}
-
-.subscribe article h3 {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 45px;
-
-    margin-bottom: 18px;
-}
-
-.subscribe article p {
-    font-size: 14px;
-    line-height: 18px;
-}
-
-.subscribe fieldset {
-    width: 40%;
-    background-color: #FFFFFF;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 10px 5px 10px;
-}
-
-.email-label {
-    display: flex;
-    align-items: center;
-}
-
-.email-label img {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-#user-email {
-    border: none;
 }
 
 /* modal 부분 */
@@ -243,7 +183,7 @@ main .img_wrap img {
     z-index: 999;
 }
 
-#modal .modal_wrap {
+#modal .modal-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,21 +195,21 @@ main .img_wrap img {
     box-shadow: 0px 0px 30px 0px #00000033;
 }
 
-.thank {
+.thank-modal {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.thank h3 {
+.thank-modal h3 {
     font-size: 36px;
     color: #D97652;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.thank p {
+.thank-modal p {
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 35px;

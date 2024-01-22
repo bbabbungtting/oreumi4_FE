@@ -5,7 +5,6 @@ const url = `https://api.thecatapi.com/v1/images/search?limit=6`;
 const api_key = 'live_3ECLcENjnPHFksrsiwNvVgz6DcIpOatLNm4yx2GyvTnmFjrdOxsYXT8enqoWbDJ0';
 
 let timer;
-let isShow = false;
 let imgList;
 
 
@@ -20,9 +19,9 @@ function fetchImages() {
         .then((data) => {
             let imagesData = data;
             imagesData.map(function (imageData) {
-                imageList.innerHTML += "<li><button class='btn-list'><img src=" + imageData.url + " alt=''></button></li>"
+                imageList.innerHTML += "<li><button class='btn-img'><img src=" + imageData.url + " alt=''></button></li>"
             });
-            imgList = document.querySelectorAll('.btn-list');
+            imgList = document.querySelectorAll('.btn-img');
             [].forEach.call(imgList, function (col) {
                 col.addEventListener('click', show, false);
             })
