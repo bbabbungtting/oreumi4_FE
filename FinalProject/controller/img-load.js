@@ -1,36 +1,35 @@
 const imageList = document.querySelector(".list-photos");
 const photos_list = document.querySelector('.main-photos');
 
+const url = `https://api.thecatapi.com/v1/images/search?limit=6`;
+const api_key = 'live_3ECLcENjnPHFksrsiwNvVgz6DcIpOatLNm4yx2GyvTnmFjrdOxsYXT8enqoWbDJ0';
+
 let timer;
 let isShow = false;
 let imgList;
 
-async function fetchImages(pNum) {
-    try {
-        const response = await fetch('https://picsum.photos/v2/list?page=' + pNum + '&limit=6');
-        if (!response.ok) {
-            throw new Error('네트워크 응답에 문제가 있습니다.');
+
+function fetchImages() {
+    fetch(url, {
+        headers: {
+            'x-api-key': api_key
         }
-
-        const datas = await response.json();
-        makeImageList(datas);
-
-        imgList = document.querySelectorAll('.btn-list');
-        [].forEach.call(imgList, function (col) {
-            col.addEventListener('click', show, false);
-        })
-
-        pageNum++;
-
-    } catch (error) {
-        console.error('데이터를 가져오는데 문제가 발생했습니다 :', error);
-    }
-}
-
-function makeImageList(datas) {
-    datas.forEach((item) => {
-        imageList.innerHTML += "<li><button class='btn-list'><img src=" + item.download_url + " alt=''></button></li>";
+    }).then((response) => {
+        return response.json();
     })
+        .then((data) => {
+            let imagesData = data;
+            imagesData.map(function (imageData) {
+                imageList.innerHTML += "<li><button class='btn-list'><img src=" + imageData.url + " alt=''></button></li>"
+            });
+            imgList = document.querySelectorAll('.btn-list');
+            [].forEach.call(imgList, function (col) {
+                col.addEventListener('click', show, false);
+            })
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
 window.addEventListener('scroll', () => {
@@ -40,13 +39,9 @@ window.addEventListener('scroll', () => {
             if (!timer) {
                 timer = setTimeout(() => {
                     timer = null;
-                    fetchImages(pageNum);
+                    fetchImages();
                 }, 200);
             }
         }
     }
 })
-
-
-
-

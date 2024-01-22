@@ -8,7 +8,6 @@ const modal = document.getElementById("modal");
 
 let btn_bigImg = document.getElementById("big-img");
 let cols = document.querySelectorAll('.btn-list');
-let pageNum = 1;
 
 btn_show.addEventListener('click', function () {
     if (isShow) {
@@ -17,7 +16,7 @@ btn_show.addEventListener('click', function () {
     } else {
         isShow = true;
         btn_show.innerText = "Stop";
-        fetchImages(pageNum);
+        fetchImages();
     }
 });
 
