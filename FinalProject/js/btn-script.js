@@ -61,11 +61,11 @@ let backToTop = () =>{
     window.addEventListener('scroll',()=>{
         if(document.querySelector('html').scrollTop>10){
             btn_up.style.borderColor = '#999999';
-            img_up.src = "../assets/images/arrow_can_up.svg";
+            img_up.src = "assets/images/arrow_can_up.svg";
             btn_up.style.cursor ='pointer';
         }else{
             btn_up.style.borderColor = '#D3D3D3';
-            img_up.src = "../assets/images/arrow_cant_up.svg";
+            img_up.src = "assets/images/arrow_cant_up.svg";
             btn_up.style.cursor ='default';
         }
     })
