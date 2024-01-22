@@ -20,7 +20,7 @@ btn_show.addEventListener('click', function () {
         btn_show.innerText = "Show more";
     } else {
         isShow = true;
-        btn_show.innerText = "Stop";
+        btn_show.innerText = "Enough Cat!";
         fetchImages();
     }
 });
