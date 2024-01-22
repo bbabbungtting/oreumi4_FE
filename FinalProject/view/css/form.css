@@ -42,6 +42,7 @@
 .email-label {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .email-label img {
@@ -50,5 +51,8 @@
 }
 
 .email-label input {
+    line-height: 20px;
+    width: 90%;
     border: none;
+    outline: none;
 }
