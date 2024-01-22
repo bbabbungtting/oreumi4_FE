@@ -1,17 +1,13 @@
+const btn_show = document.querySelector('.btn-show');
 const form_sub = document.getElementById("sub-form");
 let email_input = document.getElementById("user-email");
 const btn_love = document.querySelector('.btn-love');
 const btn_up = document.getElementById("btn-up");
 let img_up = document.getElementById("img-up");
 const modal = document.getElementById("modal");
-
 let btn_bigImg = document.getElementById("btn-img-expan");
 let cols = document.querySelectorAll('.btn-img');
-
-//////////////////////////////
-const btn_show = document.querySelector('.btn-show');
 let isShow = false;
-
 
 btn_show.addEventListener('click', function () {
     if (isShow) {
@@ -40,6 +36,8 @@ btn_bigImg.addEventListener('click',function (){
 
 [].forEach.call(cols, function (col){
     col.addEventListener('click',show,false);
+    col.addEventListener('mouseenter',imgEnter,false);
+    col.addEventListener('mouseleave',imgLeave,false);
 })
 
 function show(){
@@ -48,7 +46,18 @@ function show(){
     btn_bigImg.innerHTML = '<img src="' + img_source + '">';
 }
 
-var backToTop = () =>{
+function imgEnter(){
+    let selectImg = this.querySelector('img');
+    selectImg.style.width = '115%';
+}
+
+function imgLeave(){
+    let selectImg = this.querySelector('img');
+    selectImg.style.display = 'inline-block';
+    selectImg.style.width = '100%';
+}
+
+let backToTop = () =>{
     window.addEventListener('scroll',()=>{
         if(document.querySelector('html').scrollTop>10){
             btn_up.style.borderColor = '#999999';

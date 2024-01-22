@@ -25,6 +25,7 @@ button {
 
 /*사진 띄우기*/
 .btn-img {
+    border-radius: 30px;
     background-color: #FFFFFF;
 }
 
