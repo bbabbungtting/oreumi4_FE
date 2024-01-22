@@ -3,6 +3,7 @@ const photos_list = document.querySelector('.main-photos');
 
 let timer;
 let isShow = false;
+let imgList;
 
 async function fetchImages(pNum) {
     try {
@@ -13,6 +14,12 @@ async function fetchImages(pNum) {
 
         const datas = await response.json();
         makeImageList(datas);
+
+        imgList = document.querySelectorAll('.btn-list');
+        [].forEach.call(imgList, function (col){
+            col.addEventListener('click',show,false);
+        })
+
         pageNum++;
 
     } catch (error) {
@@ -29,7 +36,7 @@ function makeImageList(datas) {
 window.addEventListener('scroll', () => {
     if (isShow) {
         if (window.innerHeight + document.documentElement.scrollTop >=
-            photos_list.offsetTop + photos_list.offsetHeight + 100) {
+            photos_list.offsetTop + photos_list.offsetHeight + 150) {
             if (!timer) {
                 timer = setTimeout(() => {
                     timer = null;
