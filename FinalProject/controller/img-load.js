@@ -16,8 +16,8 @@ async function fetchImages(pNum) {
         makeImageList(datas);
 
         imgList = document.querySelectorAll('.btn-list');
-        [].forEach.call(imgList, function (col){
-            col.addEventListener('click',show,false);
+        [].forEach.call(imgList, function (col) {
+            col.addEventListener('click', show, false);
         })
 
         pageNum++;
