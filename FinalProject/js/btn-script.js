@@ -1,14 +1,19 @@
+//main 사진
 const btn_show = document.querySelector('.btn-show');
-const form_sub = document.getElementById("sub-form");
+let all_imgs = document.querySelectorAll('.btn-img');
+let isShow = false;
+let btn_bigImg = document.getElementById("btn-img-expan");
+//subscribe
+const form_sub = document.querySelector('.subscribe-main');
 let email_input = document.getElementById("user-email");
+//modal
+const modal = document.getElementById("modal");
 const btn_love = document.querySelector('.btn-love');
+//위로 가기 버튼
 const btn_up = document.getElementById("btn-up");
 let img_up = document.getElementById("img-up");
-const modal = document.getElementById("modal");
-let btn_bigImg = document.getElementById("btn-img-expan");
-let cols = document.querySelectorAll('.btn-img');
-let isShow = false;
 
+//main 사진 부분
 btn_show.addEventListener('click', function () {
     if (isShow) {
         isShow = false;
@@ -20,25 +25,13 @@ btn_show.addEventListener('click', function () {
     }
 });
 
-form_sub.addEventListener('submit',function(event){
-    event.preventDefault();
-    modal.style.display = 'block';
-    email_input.value = '';
-});
-
-btn_love.addEventListener('click',function (){
-    modal.style.display = 'none';
-});
-
-btn_bigImg.addEventListener('click',function (){
-    btn_bigImg.style.display = 'none';
-});
-
-[].forEach.call(cols, function (col){
-    col.addEventListener('click',show,false);
-    col.addEventListener('mouseenter',imgEnter,false);
-    col.addEventListener('mouseleave',imgLeave,false);
-})
+let addEvent = (photoList) =>{
+    [].forEach.call(photoList, function (photo){
+        photo.addEventListener('click',show,false);
+        photo.addEventListener('mouseenter',imgEnter,false);
+        photo.addEventListener('mouseleave',imgLeave,false);
+    })
+}
 
 function show(){
     btn_bigImg.style.display = 'block';
@@ -57,6 +50,24 @@ function imgLeave(){
     selectImg.style.width = '100%';
 }
 
+btn_bigImg.addEventListener('click',function (){
+    btn_bigImg.style.display = 'none';
+});
+
+addEvent(all_imgs);
+
+//이메일 입력 부분
+form_sub.addEventListener('submit',function(event){
+    event.preventDefault();
+    modal.style.display = 'block';
+    email_input.value = '';
+});
+
+btn_love.addEventListener('click',function (){
+    modal.style.display = 'none';
+});
+
+//위로 가기 버튼
 let backToTop = () =>{
     window.addEventListener('scroll',()=>{
         if(document.querySelector('html').scrollTop>10){
