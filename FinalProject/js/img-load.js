@@ -36,7 +36,7 @@ window.addEventListener('scroll', () => {
                 timer = setTimeout(() => {
                     timer = null;
                     fetchImages();
-                }, 200);
+                }, 500);
             }
         }
     }
