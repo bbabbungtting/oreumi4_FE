@@ -2,6 +2,7 @@
 let btn_all = document.querySelectorAll('.btn-download, .btn-show ,.btn-subscribe, .btn-love');
 //main 사진
 const btn_show = document.querySelector('.btn-show');
+let intro_show = document.querySelector('.intro-show');
 let all_imgs = document.querySelectorAll('.btn-img');
 let isShow = false;
 let btn_bigImg = document.getElementById("btn-img-expan");
@@ -24,6 +25,7 @@ btn_all.forEach(function (btn) {
 function btnEnter() {
     this.style.boxShadow = '5px 5px 5px gray';
 }
+
 function btnLeave() {
     this.style.boxShadow = "0px 0px 0px #00000000";
 }
@@ -32,16 +34,18 @@ function btnLeave() {
 btn_show.addEventListener('click', function () {
     if (isShow) {
         isShow = false;
+        intro_show.innerText = 'Click the button below to exploring another Cat!';
         btn_show.innerText = "Show more";
     } else {
         isShow = true;
+        intro_show.innerText = 'Scroll down to exploring more Cat!';
         btn_show.innerText = "Enough Cat!";
         fetchImages();
     }
 });
 
-function addEvent(photoList){
-    photoList.forEach(function(photo){
+function addEvent(photoList) {
+    photoList.forEach(function (photo) {
         photo.addEventListener('click', expan);
         photo.addEventListener('mouseenter', imgEnter);
         photo.addEventListener('mouseleave', imgLeave);
