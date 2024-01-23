@@ -1,5 +1,7 @@
 # FE-Project : HODU 렌딩 페이지 만들기 
+<img src="assets/images/img_cat_modal.png">
 
+#### 📑 [프로젝트 계획서](https://www.notion.so/oreumi/60c5d65a21d84cd89663d89cf06d89f6?p=e8a6ca930dbd4b2687b04f450cab1c44&pm=s)
 ## 🏁 [완성 페이지(gitPage)](https://bbabbungtting.github.io/oreumi4_FE/FinalProject/)
 
 # **🎯 프로그래밍 요구 사항**
@@ -8,7 +10,7 @@
     1. `ajax`, `dom` 적극적으로 활용
 2. TIL 페이지에 프로젝트 진행 내용 매일 기록한다.
 3. **최대한 의미있게, simantic 하게 코드를 작성한다.**
-4. github에 올리고 코드를 지속적으로 관리한다.
+4. 깃허브에 올리고 코드를 지속적으로 관리한다.
 5. API 연동해서 결과물을 UI로 출력한다.
     1. 카카오 지도 API, 사진 API
 6. 불필요한 html 태그, css 사용을 지양한다
@@ -88,7 +90,7 @@
    1. mobile용 만들기 도전
    2. 반응형으로 만들어 보기
    
-# 주요 기능
+# 💡 주요 기능
 - ### 사진 무한 스크롤
   1. `Show more` 버튼을 클릭하면 이미지 6개를 추가해서 보여준다.
   
@@ -97,7 +99,7 @@
      - Throttling(스로틀링)을 적용해서 한번에 많이 함수가 실행되지 않게 방지한다.
   3. `Enough Cat` 버튼을 클릭하면 모든 이미지 추가 기능을 멈춘다.
   
-        <img src="assets/images/readme/btn_enoughcat.png" width=60%>
+        <img src="assets/images/readme/btn_enoughcat.PNG" width=60%>
   
 - ### 사진 확대 기능
   1. 사진에 커서를 가져다 대면(`mouseenter`) 커서가 바뀌고, 사진이 살짝 커진다.
@@ -105,7 +107,7 @@
         <img src="assets/images/readme/img_mouseenter.png" width=60%>
   2. 클릭 하면 사진이 확대되어서 나타난다.
 
-        <img src="assets/images/readme/img_expan.png" width=60%>
+        <img src="assets/images/readme/img_expan.PNG" width=60%>
   3. 아무곳이나 다시 클릭하면 확대한 사진이 사라진다.
   4. `main photo` 안에 있는 사진들 모두 확대 가능하다.
 - ### 버튼 `mouseenter` 기능
