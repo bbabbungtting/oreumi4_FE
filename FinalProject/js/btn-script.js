@@ -56,20 +56,17 @@ function expan() {
 
 function imgEnter() {
     let selectImg = this.querySelector('img');
-    selectImg.style.width = '115%';
+    selectImg.style.transform = 'scale(1.15)';
 }
 
 function imgLeave() {
     let selectImg = this.querySelector('img');
-    selectImg.style.display = 'inline-block';
-    selectImg.style.width = '100%';
+    selectImg.style.transform = 'scale(1)';
 }
 
 btn_bigImg.addEventListener('click', function () {
     btn_bigImg.style.display = 'none';
 });
-
-addEvent(all_imgs);
 
 //subscribe & modal 부분
 form_sub.addEventListener('submit', function (event) {
@@ -107,4 +104,5 @@ let backToTop = () => {
     })
 };
 
+addEvent(all_imgs);
 backToTop();
