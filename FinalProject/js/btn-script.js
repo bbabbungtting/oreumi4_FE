@@ -28,7 +28,6 @@ function btnLeave() {
     this.style.boxShadow = "0px 0px 0px #00000000";
 }
 
-
 //main 사진 부분
 btn_show.addEventListener('click', function () {
     if (isShow) {
@@ -41,15 +40,15 @@ btn_show.addEventListener('click', function () {
     }
 });
 
-let addEvent = (photoList) => {
-    [].forEach.call(photoList, function (photo) {
-        photo.addEventListener('click', show, false);
-        photo.addEventListener('mouseenter', imgEnter, false);
-        photo.addEventListener('mouseleave', imgLeave, false);
+function addEvent(photoList){
+    photoList.forEach(function(photo){
+        photo.addEventListener('click', expan);
+        photo.addEventListener('mouseenter', imgEnter);
+        photo.addEventListener('mouseleave', imgLeave);
     })
 }
 
-function show() {
+function expan() {
     btn_bigImg.style.display = 'block';
     let img_source = this.querySelector('img').src;
     btn_bigImg.innerHTML = '<img src="' + img_source + '">';

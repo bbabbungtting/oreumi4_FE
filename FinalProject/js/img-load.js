@@ -7,7 +7,6 @@ const api_key = 'live_3ECLcENjnPHFksrsiwNvVgz6DcIpOatLNm4yx2GyvTnmFjrdOxsYXT8enq
 let timer;
 let newImgList;
 
-
 function fetchImages() {
     fetch(url, {
         headers: {
