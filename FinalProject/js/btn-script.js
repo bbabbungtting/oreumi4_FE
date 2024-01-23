@@ -1,3 +1,5 @@
+//공통부분
+let btn_all = document.querySelectorAll('.btn-download, .btn-show ,.btn-subscribe, .btn-love');
 //main 사진
 const btn_show = document.querySelector('.btn-show');
 let all_imgs = document.querySelectorAll('.btn-img');
@@ -13,6 +15,20 @@ const btn_love = document.querySelector('.btn-love');
 const btn_up = document.getElementById("btn-up");
 let img_up = document.getElementById("img-up");
 
+//공통부분
+btn_all.forEach(function (btn) {
+    btn.addEventListener('mouseenter', btnEnter);
+    btn.addEventListener('mouseleave', btnLeave);
+});
+
+function btnEnter() {
+    this.style.boxShadow = '5px 5px 5px gray';
+}
+function btnLeave() {
+    this.style.boxShadow = "0px 0px 0px #00000000";
+}
+
+
 //main 사진 부분
 btn_show.addEventListener('click', function () {
     if (isShow) {
@@ -25,67 +41,67 @@ btn_show.addEventListener('click', function () {
     }
 });
 
-let addEvent = (photoList) =>{
-    [].forEach.call(photoList, function (photo){
-        photo.addEventListener('click',show,false);
-        photo.addEventListener('mouseenter',imgEnter,false);
-        photo.addEventListener('mouseleave',imgLeave,false);
+let addEvent = (photoList) => {
+    [].forEach.call(photoList, function (photo) {
+        photo.addEventListener('click', show, false);
+        photo.addEventListener('mouseenter', imgEnter, false);
+        photo.addEventListener('mouseleave', imgLeave, false);
     })
 }
 
-function show(){
+function show() {
     btn_bigImg.style.display = 'block';
     let img_source = this.querySelector('img').src;
     btn_bigImg.innerHTML = '<img src="' + img_source + '">';
 }
 
-function imgEnter(){
+function imgEnter() {
     let selectImg = this.querySelector('img');
     selectImg.style.width = '115%';
 }
 
-function imgLeave(){
+function imgLeave() {
     let selectImg = this.querySelector('img');
     selectImg.style.display = 'inline-block';
     selectImg.style.width = '100%';
 }
 
-btn_bigImg.addEventListener('click',function (){
+btn_bigImg.addEventListener('click', function () {
     btn_bigImg.style.display = 'none';
 });
 
 addEvent(all_imgs);
 
-//이메일 입력 부분
-form_sub.addEventListener('submit',function(event){
+//subscribe & modal 부분
+form_sub.addEventListener('submit', function (event) {
     event.preventDefault();
     modal.style.display = 'block';
     email_input.value = '';
 });
 
-btn_love.addEventListener('click',function (){
+btn_love.addEventListener('click', function () {
     modal.style.display = 'none';
 });
 
 //위로 가기 버튼
-let backToTop = () =>{
-    window.addEventListener('scroll',()=>{
-        if(document.querySelector('html').scrollTop>10){
+let backToTop = () => {
+    window.addEventListener('scroll', () => {
+        if (document.querySelector('html').scrollTop > 10) {
             btn_up.style.borderColor = '#999999';
             img_up.src = "assets/images/arrow_can_up.svg";
-            btn_up.style.cursor ='pointer';
-        }else{
+            btn_up.style.cursor = 'pointer';
+        } else {
             btn_up.style.borderColor = '#D3D3D3';
             img_up.src = "assets/images/arrow_cant_up.svg";
-            btn_up.style.cursor ='default';
+            btn_up.style.cursor = 'default';
         }
     })
 
-    btn_up.addEventListener('click',()=>{
+    btn_up.addEventListener('click', () => {
         window.scrollTo({
-            top:0,
-            left:0,
-            behavior:'smooth'
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
         });
     })
 };
