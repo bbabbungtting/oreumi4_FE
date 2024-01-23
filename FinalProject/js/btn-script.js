@@ -2,7 +2,7 @@
 let btn_all = document.querySelectorAll('.btn-download, .btn-show ,.btn-subscribe, .btn-love');
 //main 사진
 const btn_show = document.querySelector('.btn-show');
-let intro_show = document.querySelector('.intro-show');
+let intro_show;
 let all_imgs = document.querySelectorAll('.btn-img');
 let isShow = false;
 let btn_bigImg = document.getElementById("btn-img-expan");
@@ -34,11 +34,13 @@ function btnLeave() {
 btn_show.addEventListener('click', function () {
     if (isShow) {
         isShow = false;
-        intro_show.innerText = 'Click the button below to exploring another Cat!';
+        intro_show = document.querySelector('.intro-show');
+        intro_show.innerHTML = 'Click the button below to exploring another Cat!';
         btn_show.innerText = "Show more";
     } else {
         isShow = true;
-        intro_show.innerText = 'Scroll down to exploring more Cat!';
+        intro_show = document.querySelector('.intro-show');
+        intro_show.innerHTML = 'Scroll down to exploring more Cat!';
         btn_show.innerText = "Enough Cat!";
         fetchImages();
     }
