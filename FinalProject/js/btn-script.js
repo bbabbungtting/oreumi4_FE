@@ -32,15 +32,14 @@ function btnLeave() {
 
 //main 사진 부분
 btn_show.addEventListener('click', function () {
+    intro_show = document.querySelector('.intro-show');
     if (isShow) {
         isShow = false;
-        intro_show = document.querySelector('.intro-show');
-        intro_show.innerHTML = 'Click the button below to exploring another Cat!';
+        intro_show.innerHTML = "Click the button below to exploring another Cat!";
         btn_show.innerText = "Show more";
     } else {
         isShow = true;
-        intro_show = document.querySelector('.intro-show');
-        intro_show.innerHTML = 'Scroll down to exploring more Cat!';
+        intro_show.innerHTML = "Scroll down to exploring more Cat!";
         btn_show.innerText = "Enough Cat!";
         fetchImages();
     }
