@@ -1,74 +1,75 @@
 # FE-Project : HODU 렌딩 페이지 만들기 
 
-## [목표&요구사항](https://www.notion.so/HTML-CSS-JS-97997e2842a54cb08f127420e48be512?pvs=21)
+# **🎯 프로그래밍 요구 사항**
 
-## **적용 디자인 패턴 : MVC 모델**
-
-### 📦 Model
-
-ajax 를 통해 받은 데이터와 그 데이터를 통해서 변경될 수 있는 상태
-
-### 💻 View
-
-HTML, CSS 파일들
-
-### 🕹 Controller
-
-Js 파일이 View 에서 호출되는 이벤트를 통해서 데이터를 전달하고, 전달받은 데이터로 Model을 변경
-
-- 참고 : [https://velog.io/@luna238/프론트엔드의-MVC](https://velog.io/@luna238/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C%EC%9D%98-MVC)
-
-## **명명 규칙**
-
-### Camel Case
-
-- 참고 : https://k1005.github.io/2021/07/31/naming-rules/#camelcase--pascalcase
-
-# **🛠 기능 목록**
-
-## 📦 Model `model`
-
-- modal
-- 무한 스크롤용 사진
-    - API 사용
-- 카카오맵 API
-
-## 💻 View `view`
-
-- HODU-mainPage.html
-- HODU-mainPage.css
-
-## 🕹 Controller `controller`
-
-- [X] 버튼 입력시 무한 스크롤 생성
-  - Show more 클릭 시 사진 무한 스크롤 시작
-  - Stop 클릭 시 사진 무한 스크롤 정지
-- [X] 카카오맵 API 사용
-- [X] subscribe 버튼 입력시 modal 생성
-- [X] 맨위로 가기 버튼
-  - 클릭 가능 할 때와 아닐 때 구분
-- [ ] 애니매이션 적용
-
-## 🗃 Assets `assets`
-
-- **`images`** : 이미지
-- **`fonts`** : 글씨 폰트
-
-# 🎯 프로그래밍 요구 사항
-
-1. 최대한 학습한 내용을 바탕으로 최대한 구현을 목표로 한다.
-   1. `ajax`, `dom` 등 적극적으로 활용
+1. 최대한 학습한 내용을 바탕으로 구현을 목표로 한다.
+    1. `ajax`, `dom` 적극적으로 활용
 2. TIL 페이지에 프로젝트 진행 내용 매일 기록한다.
 3. **최대한 의미있게, simantic 하게 코드를 작성한다.**
 4. github에 올리고 코드를 지속적으로 관리한다.
 5. API 연동해서 결과물을 UI로 출력한다.
-   1. 지도 API, 사진 API
+    1. 지도 API, 사진 API
 6. 불필요한 html 태그, css 사용을 지양한다
+
+# **🛠 기능 목록**
+
+## 🎨 CSS `css`
+
+- ### `commom.css`
+  - 공통적으로 적용되는 css (wrapper 등)
+  - 문자를 주로 다루는 태그들에 대한 css (article 등)
+- ### `button.css`
+  - 모든 버튼들에 대한 css
+- ### `map.css`
+  - 카카오 API에서 제공하는 지도 관련 css
+- ### `form.css`
+  - 이메일 입력 창에서 적용되는 css
+
+## 💻 HTML`index.html`
+
+- ### `index.html`
+  - 기본 페이지에 대한 html
+
+## 🕹 JavaScript `js`
+
+- ### `btn-script.js`
+  - [X] 이미지 무한 스크롤을 시작하는 기능
+    - 'Show more' 버튼 클릭 시 사진 무한 스크롤 시작
+    - 'Enough Cat!' 버튼 클릭 시 사진 무한 스크롤 정지
+  - [X] 사진 클릭시 확대하는 기능
+    - show() : 사진버튼 클릭시 사진 소스 활용해서 크게 띄운다
+    - imgEnter() : 사진버튼에 커서가 올라가면 사진 크기 확대
+    - imgLeave() : 사진버튼에서 커서가 사라지면 사진 크기 축소
+  - [X] 이메일 입력 & modal 창 띄우는 기능
+    - 이메일 입력후 subscribe 버튼 클릭 시 modal 창 띄우기
+      - 입력 후에 새로고침 방지 : preventDefault();
+      - 입력 후에 입력창 초기화
+    - 모달 창 버튼 클릭 시 모달 숨기기
+  - [X] 위로가기 버튼
+    - 기능 활성화/비활성화 구분해서 표현
+    - 버튼 클릭 시 가장 위로 이동
+- ### `img-load.js`
+  - 'The Cat API'에서 제공하는 API를 활용한 고양이 사진을 가져오는 JS
+    - [X] fetch를 통해서 json안의 사진 정보를 통해서 사진을 띄워 주는 기능
+    - [X] 사진 무한 스크롤 기능
+      - 쓰로틀 기능을 추가하여 반복 방지 
+- ### `make-map.js`
+  - 카카오 API에서 제공하는 JS
+  - [X] 기본적인 지도 나타내는 기능
+  - [X] 지도 컨트롤 버튼 생성하는 기능
+  - [X] 기본 마크 표시하는 기능
+
+## 🗃 Assets `assets`
+- **`images`** : 이미지
+- **`fonts`** : 글씨 폰트
 
 ## 📮 결과물 제출
 - 프로젝트 결과물은 gitHub 주소로 공유
 - 시연 링크 공유
+  - gitPage를 통해 배포&제출
 - git commit 메시지는 단위 작업과 관련된 내용을 요약하여 작성
+
+### 👉 [제출 링크](https://www.notion.so/oreumi/Front-End-97997e2842a54cb08f127420e48be512)
 
 ## 📝 나의 요구 사항
 
