@@ -1,5 +1,7 @@
 # FE-Project : HODU 렌딩 페이지 만들기 
 
+## 🏁 [완성 페이지(gitPage)](https://bbabbungtting.github.io/oreumi4_FE/FinalProject/)
+
 # **🎯 프로그래밍 요구 사항**
 
 1. 최대한 학습한 내용을 바탕으로 구현을 목표로 한다.
@@ -17,6 +19,7 @@
 
 - ### `commom.css`
   - 공통적으로 적용되는 css (wrapper 등)
+  - 구역을 나눌때 사용되는 css
   - 문자를 주로 다루는 태그들에 대한 css (article 등)
 - ### `button.css`
   - 모든 버튼들에 대한 css
@@ -58,6 +61,8 @@
   - [X] 기본적인 지도 나타내는 기능
   - [X] 지도 컨트롤 버튼 생성하는 기능
   - [X] 기본 마크 표시하는 기능
+- ### `animation.js`
+  - [X] 이메일 제출 시 애니메이션을 실행하는 기능
 
 ## 🗃 Assets `assets`
 - **`images`** : 이미지
