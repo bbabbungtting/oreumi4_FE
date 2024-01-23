@@ -220,9 +220,14 @@ main {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #f00;
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     animation: fall 1s linear infinite;
+}
+
+.confetti img{
+    width: 30px;
 }
 
 @keyframes fall {
