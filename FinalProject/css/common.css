@@ -215,6 +215,39 @@ main {
     margin-bottom: 35px;
 }
 
+/* 애니메이션 부분 */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    border-radius: 50%;
+    animation: fall 1s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
 /* 이미지 부분 */
 .img-bottom {
     width: 100%;

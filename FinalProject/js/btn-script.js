@@ -76,6 +76,8 @@ form_sub.addEventListener('submit', function (event) {
     event.preventDefault();
     modal.style.display = 'block';
     email_input.value = '';
+
+    startConfetti();
 });
 
 btn_love.addEventListener('click', function () {
